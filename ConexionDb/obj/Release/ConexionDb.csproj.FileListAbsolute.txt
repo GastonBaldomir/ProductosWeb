@@ -1,0 +1,9 @@
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Release\ConexionDb.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Release\ConexionDb.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Release\Dominio.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Release\Dominio.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Release\ConexionDb.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Release\ConexionDb.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Release\ConexionDb.csproj.CopyComplete
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Release\ConexionDb.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Release\ConexionDb.pdb

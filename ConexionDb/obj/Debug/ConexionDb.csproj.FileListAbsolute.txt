@@ -16,3 +16,12 @@ C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\ConexionDb\obj\Debug
 C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\ConexionDb\obj\Debug\ConexionDb.csproj.CopyComplete
 C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\ConexionDb\obj\Debug\ConexionDb.dll
 C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\ConexionDb\obj\Debug\ConexionDb.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Debug\ConexionDb.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Debug\ConexionDb.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Debug\Dominio.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\bin\Debug\Dominio.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Debug\ConexionDb.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Debug\ConexionDb.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Debug\ConexionDb.csproj.CopyComplete
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Debug\ConexionDb.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\ConexionDb\obj\Debug\ConexionDb.pdb

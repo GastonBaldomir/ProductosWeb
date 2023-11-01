@@ -18,8 +18,10 @@ namespace ProductosWeb
         public List<Productos> ListaProductos { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            ListaProductos = new List<Productos>();
             try
             {
+                
                 ProductosNegocio negocio = new ProductosNegocio();
                 ListaProductos = negocio.listar();
                 if(txbFiltroDefault.Text == "" || ddwnFiltroCriterioDefault.Text == "" || ddwnFiltroCampoDefault.Text== "Filtrar por...")

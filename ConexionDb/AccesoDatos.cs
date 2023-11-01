@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Web.Configuration;
 
 namespace ConexionDb
 {
@@ -19,8 +20,10 @@ namespace ConexionDb
         }
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_WEB_DB; integrated security=true;");
+           // conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_WEB_DB; integrated security=true;");
             comando = new SqlCommand();
+            conexion= new SqlConnection(WebConfigurationManager.AppSettings["cadenaConexion"]);
+
         }
         public void setearConsulta(string consulta)
         {

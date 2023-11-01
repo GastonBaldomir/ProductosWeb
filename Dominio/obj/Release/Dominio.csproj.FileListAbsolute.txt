@@ -1,0 +1,6 @@
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\bin\Release\Dominio.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\bin\Release\Dominio.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Release\Dominio.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Release\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Release\Dominio.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Release\Dominio.pdb

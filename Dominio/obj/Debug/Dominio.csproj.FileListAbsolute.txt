@@ -10,3 +10,9 @@ C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\Dominio\obj\Debug\Do
 C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\Dominio\obj\Debug\Dominio.dll
 C:\Users\PC\Desktop\Cursos\Curso C# Nivel 3\TpFinalNivel3MP\Dominio\obj\Debug\Dominio.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\bin\Debug\Dominio.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\bin\Debug\Dominio.pdb
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Debug\Dominio.dll
+C:\Users\PC\Desktop\Maxi Nivel 3\ProductosWeb\Dominio\obj\Debug\Dominio.pdb
