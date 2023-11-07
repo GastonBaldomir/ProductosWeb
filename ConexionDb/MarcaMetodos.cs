@@ -9,7 +9,7 @@ namespace ConexionDb
 {
     public class MarcaMetodos
     {
-        public List<Marca> listar()
+        public List<Marca> ListarMarca()
         {
             List<Marca> listaelementos = new List<Marca>();
             AccesoDatos datos = new AccesoDatos();

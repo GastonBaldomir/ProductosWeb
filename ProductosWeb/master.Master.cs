@@ -25,7 +25,7 @@ namespace ProductosWeb
                 Persona user = ((Persona)Session["usuario"]);
 
                 if ((user.ImgPerfil != "") && (user.ImgPerfil != null))
-                    imgAvatar.ImageUrl = "~/Images/" + ((Persona)Session["usuario"]).ImgPerfil;
+                    imgAvatar.ImageUrl = "~/Images/" + ((Persona)Session["usuario"]).ImgPerfil+"?v=" + DateTime.Now.Ticks.ToString();
                 else
                     imgAvatar.ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28WA2ZQREgEZ1jva2HNK6hzzNLXtnkxGhG2eCg1bAuw&s";
 

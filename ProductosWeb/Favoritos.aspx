@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="text-center mt-5 fs-2">Seccion favoritos</h1>
+    <h1 class="text-center mt-5 fs-2">Sección favoritos.</h1>
     <% if (Session["Favoritos"]==null)
         {  %>
     <p class="text-center mt-3 text-primary">Agregá productos a esta sección desde el catálogo principal, accediendo a la opción (Ver detalle) del producto. </p>

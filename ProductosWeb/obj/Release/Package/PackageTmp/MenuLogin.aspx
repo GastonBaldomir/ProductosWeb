@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container row mt-5">
-        <div class="col-md-4 text-center mt-4">
+        <div class="col-md-4 text-center mt-4 bg-light border border-gray rounded mb-2">
             <div class="mb- mt-2 text-center">
                 <label class=" text-primary fs-5">Nombre</label>
                 <asp:TextBox runat="server" ID="txbNombrePerfil" CssClass="form-control text-center" />
@@ -33,7 +33,7 @@
         <div class="col-md-4 text-center mt-4">
             <div class="mb-4">
             </div>
-            <asp:Image ID="nuevoPerfilImg" runat="server" CssClass=" mb-3" Width="100%"
+            <asp:Image ID="nuevoPerfilImg" runat="server" CssClass="border border-gray mb-3" Width="100%"
                 ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28WA2ZQREgEZ1jva2HNK6hzzNLXtnkxGhG2eCg1bAuw&s" />
         </div>
 

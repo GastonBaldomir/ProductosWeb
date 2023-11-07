@@ -18,8 +18,8 @@ namespace ProductosWeb
                 if (Session["Favoritos"] == null)
                 {
                     Session["Favoritos"] = new List<Productos>(); //recibi ayuda en esta parte Maxi, creo que se podia hacer mas facil pero me trabé
-                                                                  // use chatgpt te eh fallado jaja 
-                }
+                                                                  // use chatgpt te eh fallado jaja pero entendi el codigo y como funciona
+                }                                   
                 return (List<Productos>)Session["Favoritos"];
             }
             set

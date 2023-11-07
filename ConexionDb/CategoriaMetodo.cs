@@ -11,7 +11,7 @@ namespace ConexionDb
 {
     public class CategoriaMetodo
     {
-        public List<Categoria> listar()
+        public List<Categoria> ListarCat()
         { 
             List<Categoria> listacategoria = new List<Categoria>();
             AccesoDatos datos = new AccesoDatos();

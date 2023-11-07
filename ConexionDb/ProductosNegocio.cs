@@ -137,10 +137,10 @@ namespace ConexionDb
 
             if (campo == "Precio")
             {
-                int valorPrecio = int.Parse(valor);
+                float valorPrecio = float.Parse(valor);
                 if (criterio == "Mayor a:")
                 {
-                    listaFiltrar = listaProductosF.FindAll(x => x.Precio > int.Parse(valor));
+                    listaFiltrar = listaProductosF.FindAll(x => x.Precio > Decimal.Parse(valor));
                     dgvProductos.DataSource = null;
                     dgvProductos.DataSource = listaFiltrar;
                     dgvProductos.DataBind();
@@ -204,7 +204,7 @@ namespace ConexionDb
 
         }
 
-        public List<Productos> listarFiltroDB(string campo, string criterio, string valor)
+        public List<Productos> listarFiltroDB(string campo, string criterio, string valor )
         {
             try
             {
@@ -218,13 +218,13 @@ namespace ConexionDb
                     switch (criterio)
                     {
                         case "Mayor a:":
-                            consulta += "Precio > " + (int.Parse(valor));
+                            consulta += "Precio > " + (float.Parse(valor));
                             break;
                         case "Menor a:":
-                            consulta += "Precio < " + (int.Parse(valor));
+                            consulta += "Precio < " + (float.Parse(valor));
                             break;
                         default:
-                            consulta += "Precio = " + (int.Parse(valor));
+                            consulta += "Precio = " + (float.Parse(valor));
                             break;
                     }
                 }

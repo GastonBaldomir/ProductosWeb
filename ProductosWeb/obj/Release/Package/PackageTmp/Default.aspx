@@ -1,6 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ProductosWeb.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   <style>
+        .validacion{
+            color:green;
+            font-size: 15px;
+            display:flex;
+            justify-content:center;
+        }
+        
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="scriptManager1" runat="server" />
@@ -12,11 +21,13 @@
     <div class="row">
         <asp:UpdatePanel runat="server">
             <ContentTemplate>
-
-
-                <div class="text-center mt-5 d-flex align-items-center justify-content-center ">
+                    <%if (ddwnFiltroCampoDefault.Text == "Precio")
+                {%>
+                     <asp:RegularExpressionValidator  CssClass="validacion" ErrorMessage="Solo números enteros." ControlToValidate="txbFiltroDefault" ValidationExpression="^[0-9]+([][0-9]+)?$" runat="server" />
+                <% } %>
+                <div class="text-center mt-3 mb-3 d-flex align-items-center justify-content-center ">
                     <% if (ConexionDb.Seguridad.sesionActiva(Session["usuario"]))
-                        { %>
+                        {%>
 
                     <div class="col-2">
                         <div class="mb-3">
@@ -43,8 +54,9 @@
                     </div>
                     <div class="col-2 m-2">
                         <div class="mb-3">
-
+                         
                             <asp:TextBox runat="server" ID="txbFiltroDefault" AutoPostBack="true" CssClass="form-control" />
+                          
                         </div>
                     </div>
 
@@ -66,7 +78,8 @@
         %>
         <div class="col text-center d-flex justify-content-center align-items-center " height="600">
             <div class="card w-50 border-2">
-                <img src="<%:item.Imagen %>" class="card-img-top" height="200" alt="...">
+                <img src="<%:item.Imagen %>"  class="card-img-top" height="200" alt="..." onerror="this.onerror=null; this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28WA2ZQREgEZ1jva2HNK6hzzNLXtnkxGhG2eCg1bAuw&s'">
+                
                 <div class="card-body bg-light">
                     <h5 class="card-title"><%:item.Nombre%></h5>
                     <%--item porque en el for each no cambie y la deje asi.--%>

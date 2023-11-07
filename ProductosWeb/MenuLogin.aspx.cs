@@ -37,7 +37,7 @@ namespace ProductosWeb
                         if ((user.ImgPerfil != "") && (user.ImgPerfil != null))
                         {
 
-                            nuevoPerfilImg.ImageUrl = "~/Images/" + ((Persona)Session["usuario"]).ImgPerfil;
+                            nuevoPerfilImg.ImageUrl = "~/Images/" + ((Persona)Session["usuario"]).ImgPerfil + "?v=" + DateTime.Now.Ticks.ToString();
                         }
                         else
                             nuevoPerfilImg.ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28WA2ZQREgEZ1jva2HNK6hzzNLXtnkxGhG2eCg1bAuw&s";
@@ -68,7 +68,7 @@ namespace ProductosWeb
                 {
                   
                     string ruta = Server.MapPath("./Images/");
-                    txtImgPerfil.PostedFile.SaveAs(ruta + "perfil-" + user.Id + ".jpg");
+                    txtImgPerfil.PostedFile.SaveAs(ruta + "perfil-" + user.Id  + ".jpg");
                     user.ImgPerfil = "perfil-" + user.Id  + ".jpg";
                 }
 

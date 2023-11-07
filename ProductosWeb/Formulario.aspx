@@ -19,6 +19,8 @@
                 <asp:Label Text="Id" ID="lblId" runat="server" class="form-label lbl" />
                 <asp:TextBox CssClass="form-control" runat="server" ID="txbId" />
             </div>
+            <asp:UpdatePanel runat="server">
+                <ContentTemplate>
             <div class="mb-3">
                 <asp:Label Text="Nombre" ID="lblNombre" runat="server" class="form-label lbl" />
                 <asp:TextBox CssClass="form-control" runat="server" ID="txbNombre" />
@@ -31,7 +33,7 @@
             </div>
             <div class="mb-3">
                 <asp:Label Text="Precio" ID="lblPrecio" runat="server" class="form-label lbl" />
-                <asp:TextBox CssClass="form-control" type="" runat="server" ID="txbPrecio" />              
+                <asp:TextBox CssClass="form-control" type="" runat="server" ID="txbPrecio" AutoPostBack="true" />              
                 <asp:RequiredFieldValidator CssClass="validacion " ErrorMessage="El campo es requerido." ControlToValidate="txbPrecio" runat="server" />
                 <asp:RegularExpressionValidator  CssClass="validacion" ErrorMessage="Solo Caractéres Numéricos." ControlToValidate="txbPrecio" ValidationExpression="^[0-9]+([.,][0-9]+)?$" runat="server" />
             </div>
@@ -46,10 +48,17 @@
             </div>
             <div class="mb-3">
                 <asp:Button Text="Aceptar" CssClass="btn btn-primary" ID="btnAceptar" runat="server" OnClick="btnAceptar_Click"  />
+                <%if ((txbPrecio.Text == "")&&(txbNombre.Text == ""))
+                    {
+                        btnCancelar.Enabled = false;
+                    } %>
                 <asp:Button Text="Cancelar" CssClass="btn btn-secondary" ID="btnCancelar" runat="server" OnClick="btnCancelar_Click"  />
                 
             </div>
         </div>
+
+                    </ContentTemplate>
+            </asp:UpdatePanel>
         <div class="col-6">
             <asp:UpdatePanel ID="updatePanel1" runat="server">
                 <ContentTemplate>
@@ -57,7 +66,7 @@
                         <asp:Label Text="Imagen" ID="txbImagen" runat="server" class="form-label lbl" />
                         <asp:TextBox CssClass="form-control" runat="server" ID="txtUrlImg" AutoPostBack="true" OnTextChanged="txtUrlImg_TextChanged1" />
                     </div>
-                    <asp:Image ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28WA2ZQREgEZ1jva2HNK6hzzNLXtnkxGhG2eCg1bAuw&s" runat="server" ID="urlImg" Width="50%" />
+                    <asp:Image ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28WA2ZQREgEZ1jva2HNK6hzzNLXtnkxGhG2eCg1bAuw&s" onerror="this.onerror=null; this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ28WA2ZQREgEZ1jva2HNK6hzzNLXtnkxGhG2eCg1bAuw&s'" runat="server" ID="urlImg" Height="350"  />
                 </ContentTemplate>
             </asp:UpdatePanel>
             <div class="mb-3 mt-3">
@@ -66,12 +75,16 @@
             </div>
         </div>
       </div>
+     </div>
      <div class="row">
             <div class="col-6"> 
                 <asp:UpdatePanel ID="updatepanelEliminar" runat="server">
                     <ContentTemplate>
                         <div class="mb-3">   
-                            <asp:Button Text="Eliminar" Cssclass="btn btn-danger" OnClick="btnEliminar_Click" id="btnEliminar" runat="server" />
+                            <%if (txbId.Text != "")
+                                { %>
+                            <asp:Button Text="Eliminar" Cssclass="btn btn-danger" OnClick="btnEliminar_Click" id="btnEliminar" runat="server"  />
+                           <%} %> 
                         </div>                 
                      <%if (confirmaEliminacion){%>
                       <div class="mb-3">   

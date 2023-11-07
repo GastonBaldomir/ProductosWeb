@@ -17,42 +17,40 @@ namespace ProductosWeb
             txbId.Enabled = false;
             try
             {
-               
+                if (txbId.Text == null)
+                {
+                    btnEliminar.Enabled = false;
+                }
                 if (!IsPostBack)
                 {
-                    ProductosNegocio productosNegocio = new ProductosNegocio();
-                    List<Productos> lista = productosNegocio.listar();
+                    
+                    CategoriaMetodo categoriaMetodo = new CategoriaMetodo();
+                    List<Categoria> lista = categoriaMetodo.ListarCat();
 
-                    HashSet<string> marcasUnicas = new HashSet<string>();
-
-
-                    List<Productos> listaMarcasUnicas = new List<Productos>();
-                    foreach (Productos producto in lista)
+                    List<Categoria> listaCatUnicas = new List<Categoria>();
+                    foreach (Categoria producto in lista)
                     {
-                        if (!marcasUnicas.Contains(producto.Marca.ToString()))
-                        {
-                            marcasUnicas.Add(producto.Marca.ToString());
-                            listaMarcasUnicas.Add(producto);
-                        }
+                       listaCatUnicas.Add(producto);
+
                     }
-                    List<Productos> listaCatUnicas = new List<Productos>();
-                    foreach (Productos producto in lista)
+                    MarcaMetodos marcaMetodos = new MarcaMetodos();
+                    List<Marca> listaM = marcaMetodos.ListarMarca();
+
+                    List<Marca> listaMarcasUnicas = new List<Marca>();
+                    foreach (Marca producto in listaM)
                     {
-                        if (!marcasUnicas.Contains(producto.Categoria.ToString()))
-                        {
-                            marcasUnicas.Add(producto.Categoria.ToString());
-                            listaCatUnicas.Add(producto);
-                        }
+                        listaMarcasUnicas.Add(producto);
+
                     }
 
                     dropDawnMarca.DataSource = listaMarcasUnicas;
                     dropDawnMarca.DataValueField = "Id";
-                    dropDawnMarca.DataTextField = "Marca";
+                    dropDawnMarca.DataTextField = "Descripcion";
                     dropDawnMarca.DataBind();
 
                     dropDawnCategoria.DataSource = listaCatUnicas;
                     dropDawnCategoria.DataValueField = "Id";
-                    dropDawnCategoria.DataTextField = "Categoria";
+                    dropDawnCategoria.DataTextField = "Descripcion";
                     dropDawnCategoria.DataBind();
                 }
             //modificar
@@ -72,7 +70,7 @@ namespace ProductosWeb
                     txbDescripcion.Text = seleccionado.Descripcion;
                     txbPrecio.Text = seleccionado.Precio.ToString();
                     if (seleccionado.Imagen != null)
-                        txtUrlImg.Text = "";
+                        txtUrlImg.Text = seleccionado.Imagen;
                     else
                         txtUrlImg.Text = seleccionado.Imagen;
                     txtUrlImg_TextChanged1(sender, e);

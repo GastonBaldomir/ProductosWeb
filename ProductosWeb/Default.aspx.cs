@@ -61,14 +61,18 @@ namespace ProductosWeb
 
         protected void btnBuscarFiltroDefault_Click(object sender, EventArgs e)
         {
+               
+                string valor= txbFiltroDefault.Text;
                 string criterio = ddwnFiltroCriterioDefault.Text;
                 string campo = ddwnFiltroCampoDefault.Text;
-                string valor = txbFiltroDefault.Text;
+           
+
                 ProductosNegocio negocio = new ProductosNegocio();
                 ProductosFiltrados = negocio.listarFiltroDB(campo, criterio, valor);
                 Session.Add("listaFiltrada", ProductosFiltrados);
                 Response.Redirect("FiltroDefault.aspx");
+            
+
         }
-        
     }
 }
